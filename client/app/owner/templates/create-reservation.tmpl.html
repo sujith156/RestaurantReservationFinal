@@ -1,0 +1,94 @@
+<div class="container-fluid">
+<h2>Create a Reservation</h2>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading"> Customer Details</div>
+        <div class="panel-body">
+            <form role="form" name="reservation_form">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label for="date">Date:</label>
+                                <input class="form-control" id="date" type="text" name="date"  placeholder="MM/DD/YYYY" data-ng-model="reservation.date" required >
+                                <div class="errors" data-ng-messages="reservation_form.date.$error" data-ng-if="reservation_form.date.$dirty">
+                                    <p data-ng-message="required">Date is required</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-xs-3">
+                                <label for="time">Time:</label>
+                                <input class="form-control" id="time" type="text" name="time" placeholder="HH:MM AM/PM" data-ng-model="reservation.time" required>
+                                <div class="errors" ng-messages="reservation_form.time.$error" ng-if="reservation_form.time.$dirty">
+                                    <p ng-message="required">Time is required</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td class="col-xs-2">
+                            <label for="PartySize">PartySize:</label>
+                            <input class="form-control" id="PartySize"  name="partysize" type="number" required placeholder="# Guests" data-ng-model="reservation.partysize">
+                            <div class="errors" ng-messages="reservation_form.partysize.$error" ng-if="reservation_form.partysize.$dirty">
+                                <p ng-message="required">Enter PartySize or N/A</p>
+                            </div>
+
+                        </td>
+                        <td class="col-xs-4">
+                            <label for="SpecialNotes">Special Notes:</label>
+                            <input type="text" name="specialnotes" id="SpecialNotes" class="form-control"
+                                   placeholder="eg. Birthday, Anniversary"  required data-ng-model="reservation.specialnotes">
+                            <div class="errors" ng-messages="reservation_form.specialnotes.$error" ng-if="reservation_form.specialnotes.$dirty">
+                                <p ng-message="required">Enter any Special notes or N/A</p>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+                <div class="form-group">
+                    <label for="name"> Name:</label>
+                    <input class="form-control" id="name" name="name" type="text" required data-ng-model="reservation.name" minlength="5">
+                    <div class="errors" ng-messages="reservation_form.name.$error" ng-if="reservation_form.name.$dirty">
+                        <p ng-message="required">Name is required</p>
+                        <p ng-message="minlength">Name must be more than 4 chars.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneno">Email:</label>
+                    <input id="phoneno" name="phonenumber" class="form-control" type="tel" placeholder="Enter your Email"
+                           required data-ng-model="reservation.phonenumber">
+                    <div class="errors"  ng-messages="reservation_form.phonenumber.$error" pattern="^[0-9]{10}$" ng-if="reservation_form.phonenumber.$dirty">
+                        <p ng-message="required">Phone is required</p>
+                        <p ng-message="pattern">Phone must have 10 digits</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Phone Number:</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter you phone number" required data-ng-model="reservation.email">
+                    <div class="errors" ng-messages="reservation_form.email.$error"  ng-if="reservation_form.email.$dirty">
+                        <p ng-message="required">Email is required</p>
+                        <p ng-message="email">Email is invalid</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Reserve" class="btn btn-primary" ng-disabled="reservation_form.$invalid" ng-click="saveForm(reservation_form)" />
+                                &nbsp&nbsp;
+                                <input type="reset" value="reset" class="btn btn-primary" ng-click="resetForm()" />
+                                &nbsp&nbsp
+                            </td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

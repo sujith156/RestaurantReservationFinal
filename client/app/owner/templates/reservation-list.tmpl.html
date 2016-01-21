@@ -1,0 +1,41 @@
+<div class="container-fluid">
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            CUSTOMER RESERVATIONS
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Confirmation</th>
+                        <th>Name</th>
+                        <th>DateTime</th>
+                        <th>No. of Guests</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="reservation in reservationListVm.reservations">
+                        <td>{{reservation.id}}</td>
+                        <td>{{reservation.name}}</td>
+                        <td>{{reservation.date}}</td>
+                        <td>{{reservation.partysize}}</td>
+                        <td><a ng-href="#/reservations_owner/view/{{reservation.id}}"> <input type="button" class="btn" value="Details"></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination" style="float: right">
+                    <li class="active"><a href="#">1</a></li>
+                    <li ><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>

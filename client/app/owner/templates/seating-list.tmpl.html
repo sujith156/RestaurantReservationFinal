@@ -1,0 +1,40 @@
+<section class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        Restaurant Seating Status<a href="#/seatingMap" style="float: right">View Map</a>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Table No.</th>
+                                <th>Size</th>
+                                <th>Status</th>
+                                <th>Time</th>
+                                <th>Confirmation</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr data-ng-repeat="table in ViewSeatingVm.tables">
+                                <td>{{table.tableno}}</td>
+                                <td>{{table.size}}</td>
+                                <td>{{table.status}}</td>
+                                <td>{{table.time}} </td>
+                                <td> {{table.id}}</td>
+                            </tr>
+
+                            </tbody>
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6"></div>
+        </div>
+        <br>
+    </div>
+</section>

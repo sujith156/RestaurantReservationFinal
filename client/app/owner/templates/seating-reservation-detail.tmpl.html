@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading"> <h5><b>Customer Details</b><label style="float: right" id="table">Table : {{reservationDetailVm.detail.tableno}}</label></h5></div>
+            <div class="panel-body">
+                <form role="form">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="id">CNF:</label>
+                                    <input class="form-control" id="id" type="text" disabled value="{{reservationDetailVm.detail.id}}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="date">Date:</label>
+                                    <input class="form-control" id="date" type="text" required  value="{{reservationDetailVm.detail.date}}">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group col-xs-3">
+                                    <label for="time">Time:</label>
+                                    <input class="form-control" id="time" type="text"  value="{{reservationDetailVm.detail.time}}">
+                                </div>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td class="col-xs-2">
+                                <label for="PartySize">PartySize:</label>
+                                <input class="form-control" id="PartySize" type="number"  placeholder="# Guests" value="{{reservationDetailVm.detail.partysize}}">
+                            </td>
+                            <td class="col-xs-4">
+                                <label for="SpecialNotes">Special Notes:</label>
+                                <input type="text" id="SpecialNotes" class="form-control" placeholder="eg. Birthday, Anniversary"   value="{{reservationDetailVm.detail.specialnotes}}">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="form-group">
+                        <label for="name"> Name:</label>
+                        <input class="form-control" id="name" type="text" required  value="{{reservationDetailVm.detail.name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneno">Phone Number:</label>
+                        <input id="phoneno" class="form-control" type="tel" placeholder="Enter your phone number" required  value="{{reservationDetailVm.detail.phonenumber}}">
+                    </div>
+                    <div class="form-group">
+                        <label  for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required  value="{{reservationDetailVm.detail.email}}">
+                    </div>
+                    <div class="form-group">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <td>
+                                    <a type="button" class="btn btn-primary" id="edit" href="#/seatingMap_open">Change Table</a>&nbsp&nbsp;
+                                    <!--<button type="button" class="btn btn-primary">Back</button>-->
+                                    <!-- <a href="#" data-target="#myview1Modal" data-toggle="modal">View an Existing Reservation?</a> -->
+                                </td>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

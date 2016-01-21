@@ -1,0 +1,19 @@
+<div class="container">
+    <section class="container-fluid">
+        <div class="row" >
+            <div class="col-sm-3" data-ng-repeat="table in ViewSeatingVm.tables" ng-class="{'':table.status=='Occupied'}">
+                <div class="box seating_table open">
+                    <p>Table #{{table.tableno}}</p>
+                    <p>{{table.status}}</p>
+                    <a ng-href="#/seatingMap/view/{{table.id}}" style="color:blue">CNF ID:{{table.id}} </a>
+                </div>
+                <br>
+                <br>
+            </div>
+
+        </div>
+        <br>
+        <br>
+    </section>
+</div>
+
