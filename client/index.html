@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="ReservationSystem">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Reservation System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <link href="dist/min/app.style.min.css" rel="stylesheet">
+</head>
+<body onload="addHeader();addFooter()">
+<header id="header"></header>
+<section ng-view></section>
+<footer id="footer"></footer>
+<!--<script src="dist/min/app.script.min.js"></script>-->
+<script src="https://code.angularjs.org/1.4.8/angular.js"></script>
+<script src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+<script src="https://code.angularjs.org/1.4.8/angular-messages.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/owner/controllers/login.controller.js"></script>
+<script src="app/guest/controllers/create-reservation.controller.js"></script>
+<script src="app/guest/services/create-reservation.service.js"></script>
+<script src="app/guest/controllers/view-reservation-detail.controller.js"></script>
+<script src="app/guest/controllers/cancel-reservation.controller.js"></script>
+<script src="app/owner/controllers/reservation-detail.controller.js"></script>
+<script src="app/owner/controllers/reservation-list.controller.js"></script>
+<script src="app/owner/controllers/view-seating.controller.js"></script>
+<script src="app/owner/controllers/view-seating-open.controller.js"></script>
+<script src="app/owner/controllers/update-profile.controller.js"></script>
+<script src="app/owner/services/update-profile.service.js"></script>
+<script src="app/owner/controllers/view-profile.controller.js"></script>
+<script src="app/guest/services/data1.service.js"></script>
+<script src="app/owner/services/data.service.js"></script>
+<script type="text/javascript" src="app/guest/MasterPage_Contents/place_in_outerHTML.js"></script>
+<script type="text/javascript" src="app/guest/MasterPage_Contents/IO.js"></script>
+<script type="text/javascript" src="app/guest/MasterPage_Contents/addHeader.js"></script>
+<script type="text/javascript" src="app/guest/MasterPage_Contents/addFooter.js"></script>
+
+</body>
+</html>
